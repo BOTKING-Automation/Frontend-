@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #05070C;
+  background-image:
+    radial-gradient(circle at 20% 0%, rgba(139, 92, 246, 0.12), transparent 45%),
+    radial-gradient(circle at 80% 10%, rgba(34, 211, 238, 0.10), transparent 40%),
+    linear-gradient(rgba(56,189,248,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56,189,248,0.04) 1px, transparent 1px);
+  background-size: auto, auto, 44px 44px, 44px 44px;
+  background-attachment: fixed;
+  color: #E5E9EF;
+  font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, .font-display {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.card {
+  @apply relative bg-panel backdrop-blur-xl border border-border rounded-2xl p-5 shadow-card transition-all duration-300;
+}
+.card:hover {
+  @apply border-borderStrong;
+}
+
+.card-glow {
+  @apply card;
+  box-shadow: 0 0 0 1px rgba(56,189,248,0.08), 0 8px 32px rgba(0,0,0,0.4);
+}
+
+.btn-primary {
+  @apply relative bg-gradient-to-r from-gold to-amber-400 text-black font-semibold rounded-xl px-4 py-2.5 transition-all duration-200 shadow-goldGlow hover:brightness-110 hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50 disabled:hover:scale-100;
+}
+
+.btn-secondary {
+  @apply bg-panel2 backdrop-blur-md text-white border border-border rounded-xl px-4 py-2.5 hover:border-cyan/50 hover:shadow-glow transition-all duration-200;
+}
+
+.input {
+  @apply w-full bg-panelSolid/60 border border-border rounded-xl px-3 py-2.5 text-white placeholder-muted focus:outline-none focus:border-cyan/60 focus:shadow-glow transition-all duration-200;
+}
+
+.label {
+  @apply text-xs uppercase tracking-wider text-muted mb-1.5 block font-medium;
+}
+
+.stat-value {
+  @apply font-display text-2xl font-bold bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent;
+}
+
+.glass-nav {
+  @apply bg-panel backdrop-blur-2xl border-r border-border;
+}
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(56,189,248,0.25); border-radius: 8px; }
