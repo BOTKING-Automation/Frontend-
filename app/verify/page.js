@@ -1,9 +1,13 @@
 'use client';
-import { useState } from 'react';
+import { Suspense, useState } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { api } from '../../lib/api';
 
 export default function Verify() {
+  return <Suspense fallback={<main className="min-h-screen flex items-center justify-center px-4"><div className="card w-full max-w-md text-muted">Loading verification...</div></main>}><VerifyForm /></Suspense>;
+}
+
+function VerifyForm() {
   const router = useRouter();
   const params = useSearchParams();
   const userId = params.get('user_id');
