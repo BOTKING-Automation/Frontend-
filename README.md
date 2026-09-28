@@ -12,23 +12,11 @@ npm run dev
 
 Open http://localhost:3000
 
-## Pages included
+## Frontend
 
-- `/` — landing page
-- `/signup`, `/verify`, `/login` — real signup with email + phone verification codes
-- `/dashboard` — wallet balances (demo + live), open trades, P&L, trade history
-- `/broker` — connect MT4/MT5 accounts (own login/password/server per user)
-- `/strategies` — browse templates, configure per-user strategy (demo or live + broker)
-- `/markets` — real TradingView advanced chart widget, symbol switcher
-- `/analytics` — win rate, equity curve, P&L by symbol, demo vs live toggle
-- `/journal` — trading journal tied to trades
-- `/profile` — account status, M-Pesa payment submission + history
-- `/education` — real article content pulled from the backend
-- `/legal/terms`, `/legal/risk-disclosure`, `/legal/privacy` — full legal pages
-- `/admin` — overview stats, payment approval queue, user management, image/media library
+The prototype runs as a single-page trading platform from `/`. Its in-app navigation includes authentication, dashboard, markets, strategies, broker connection, analytics, journal, education, profile, admin, and legal views. The application UI and API integrations are consolidated in `app/page.js`.
 
-A floating AI support widget (bottom-right) is on every page and talks to the real
-`/api/support` endpoint backed by Claude.
+For the GitHub Pages deployment and backend configuration, see [GITHUB_SETUP.md](GITHUB_SETUP.md).
 
 ## Still to build (flagging honestly, not glossing over it)
 

@@ -1,5 +1,4 @@
 import './globals.css';
-import SupportWidget from '../components/SupportWidget';
 
 export const metadata = {
   title: 'KingBot - Automated Trading Platform',
@@ -11,7 +10,6 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         {children}
-        <SupportWidget />
       </body>
     </html>
   );
